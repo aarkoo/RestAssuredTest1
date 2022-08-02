@@ -1,6 +1,10 @@
 import io.restassured.RestAssured;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
+
+import Files.Payload;
+
 
 public class TestAPI {
 
@@ -11,11 +15,16 @@ public class TestAPI {
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		
-		given().queryParam("key", "qaclick123")
+	String response=	given().queryParam("key", "qaclick123")
 	   .header("Content-Type","application/json")
-	   .body("{\"location\":{\"lat\":-38.383494,\"lng\":33.427362},\"accuracy\":50,\"name\":\"Frontlinehouse\",\"phone_number\":\"(+91)9838933937\",\"address\":\"29,sidelayout,cohen09\",\"types\":[\"shoepark\",\"shop\"],\"website\":\"http://google.com\",\"language\":\"French-IN\"}")
+	   .body(Payload.AddPlace())
 	   .when().post("maps/api/place/add/json")
-	   .then().log().all().assertThat().statusCode(200);
+	   .then().statusCode(200).header("Content-Type", "application/json;charset=UTF-8")
+	   .extract().response().asString();
+	System.out.println();
+	System.out.println(response);
+	
+	
 		
 		
 
