@@ -1,4 +1,5 @@
 package Library;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Files.Payload;
@@ -15,13 +16,18 @@ public class DynamicJSON {
 	
 	
 
-	public class NewTest {
-	  @Test
-	  public void addBook() {
+	public class NewTest 
+	{
+		
+		
+	  @Test(dataProvider = "data1")
+	  public void addBook(String aisle, String isbn) 
+	  
+	  {
 		  
 		  RestAssured.baseURI="http://216.10.245.166";
 	String res=	  given().header("Content-Type","application/json")
-		  .body(Payload.addBook("adsasf", "64814"))
+		  .body(Payload.addBook(aisle, isbn))
 		  .when()
 		  .post("/Library/Addbook.php")
 		  .then().assertThat().statusCode(200)
@@ -35,6 +41,18 @@ public class DynamicJSON {
 	System.out.println(id);
 	
 	
+	  }
+	  
+	  @DataProvider(name="data1")
+	  public Object[][] getdata()
+	  {
+	     return  new Object[][] 
+	    		 
+	       {
+			  
+			  {"adsa1saf", "64814"},
+			  {"adsa21sf", "64814"}
+		  };
 	  }
 	}
 
