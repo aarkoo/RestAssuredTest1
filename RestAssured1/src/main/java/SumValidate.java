@@ -6,7 +6,7 @@ import io.restassured.path.json.JsonPath;
 public class SumValidate {
 
 	
-	@Test
+	@org.testng.annotations.Test
 	public void sumofcourses() {
 		
 		JsonPath js= new JsonPath(Payload.Courseprice());

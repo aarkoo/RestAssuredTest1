@@ -19,7 +19,7 @@ public class TestAPI {
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		
-	String response=	given().queryParam("key", "qaclick123")
+    	String response=	given().queryParam("key", "qaclick123")
 	   .header("Content-Type","application/json")
 	   .body(Payload.AddPlace())
 	   .when().post("maps/api/place/add/json")
