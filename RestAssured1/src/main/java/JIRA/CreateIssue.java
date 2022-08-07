@@ -24,12 +24,12 @@ public class CreateIssue
 		
 		SessionFilter session =new SessionFilter();
 		//login JIRA
-	String response=	given().header("Content-Type","application/json")
+	     String response=given().header("Content-Type","application/json")
 		.body("{\"username\":\"aakashh92\",\"password\":\"Abcdefgh1@\"}").log().all().filter(session).when()
 		.post("rest/auth/1/session").then().extract().response().asString();
 	
 		
-		given().pathParam("key", 10005).log().all().header("Content-Type","application/json")
+		 given().pathParam("key", 10005).log().all().header("Content-Type","application/json")
 		.body("{\"body\":\"Akashcomment.\",\"visibility\":{\"type\":\"role\",\"value\":\"Administrators\"}}").filter(session).when()
 		.post("rest/api/2/issue/{key}/comment").then().assertThat().statusCode(201)
 		.log().all();
