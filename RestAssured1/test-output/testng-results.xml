@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-04T00:26:35 IST" name="Default suite" finished-at="2022-08-04T00:26:38 IST" duration-ms="2629">
+  <suite started-at="2022-08-10T21:22:12 IST" name="Default suite" finished-at="2022-08-10T21:22:14 IST" duration-ms="1999">
     <groups>
     </groups>
-    <test started-at="2022-08-04T00:26:35 IST" name="Default test" finished-at="2022-08-04T00:26:38 IST" duration-ms="2629">
-      <class name="Library.DynamicJSON$NewTest">
-        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:Library.DynamicJSON$NewTest@28f2a10f]" started-at="2022-08-04T00:26:35 IST" name="addBook" data-provider="data1" finished-at="2022-08-04T00:26:37 IST" duration-ms="2109" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[adsa1saf]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[64814]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2022-08-10T21:22:12 IST" name="Default test" finished-at="2022-08-10T21:22:14 IST" duration-ms="1999">
+      <class name="Oauth.Oauth">
+        <test-method signature="test1()[pri:0, instance:Oauth.Oauth@fa49800]" started-at="2022-08-10T21:22:12 IST" name="test1" finished-at="2022-08-10T21:22:14 IST" duration-ms="1973" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBook -->
-        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:Library.DynamicJSON$NewTest@28f2a10f]" started-at="2022-08-04T00:26:37 IST" name="addBook" data-provider="data1" finished-at="2022-08-04T00:26:38 IST" duration-ms="492" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[adsa21sf]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[64814]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addBook -->
-      </class> <!-- Library.DynamicJSON$NewTest -->
+        </test-method> <!-- test1 -->
+      </class> <!-- Oauth.Oauth -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
